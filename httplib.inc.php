@@ -13,11 +13,7 @@
  * @package httplib
  */
 
-/**
- * The base exception for HTTPConnection
- * @package httplib
- */ 
-class SocketError extends Exception { }
+
 /**
  * Thrown when there is an unknown server error
  * @package httplib
@@ -46,7 +42,7 @@ class HTTPConnection
      * @param string $host hostname (e.g. domain.com)
      * @param int $port port
      */
-    function __construct($host, $port=80, $timeout=60)
+    function __construct( $host, $port = 80, $timeout = 60 )
     {
         $this->host = $host;
         $this->port = $port;
@@ -68,6 +64,7 @@ class HTTPConnection
     function request($method, $path, $params, $headers=array())
     {
         $this->socket = @fsockopen($this->host, $this->port, $errorNumber, $errorString, (float)$this->timeout);
+        
         if (!$this->socket)
         {
             throw new ConnectionError('Failed connecting to '.$this->host.':'.$this->port.': '.socket_strerror($errorNumber).' ('.$errorNumber.'); '. $error);
