@@ -29,7 +29,7 @@ Limitation
 Credits
 =======
 Thanks to the original author to start this project.
-* Original-author: David Cramer <dcramer@gmail.com>
-* Me: Suwandi Tanuwijaya <swndtan@gmail.com>
+  * Original-author: David Cramer <dcramer@gmail.com>
+  * Me: Suwandi Tanuwijaya <swndtan@gmail.com>
 
 
